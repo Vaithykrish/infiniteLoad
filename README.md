@@ -8,3 +8,19 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # React
 # React
+
+
+ISSUE:
+Error: Cannot find module @rollup/rollup-darwin-arm64. npm has a bug related to optional dependencies 
+
+FIX:
+1.Clear npm cache and install dependencies:
+npm cache clean --force
+rm -rf node_modules package-lock.json
+npm install
+
+-> Still facing issue after clearing cache, try to install manually
+npm install @rollup/rollup-darwin-arm64
+
+
+
